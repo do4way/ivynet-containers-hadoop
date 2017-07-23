@@ -1,18 +1,18 @@
 steps:
     - name: 'gcr.io/cloud-builders/docker'
-      args: ['build', '--tag gcr.io/$PROJECT_ID/hadoop:2.8.0', '.']
+      args: ['build', '-t', 'gcr.io/$PROJECT_ID/hadoop:2.8.0', '.']
       dir: base
     - name: 'gcr.io/cloud-builders/docker'
-      args: ['build', '--tag gcr.io/$PROJECT_ID/hadoop-nn:2.8.0', '.']
+      args: ['build', '-t', 'gcr.io/$PROJECT_ID/hadoop-nn:2.8.0', '.']
       dir: namenode
     - name: 'gcr.io/cloud-builders/docker'
-      args: ['build', '--tag gcr.io/$PROJECT_ID/hadoop-dn:2.8.0', '.']
+      args: ['build', '-t', 'gcr.io/$PROJECT_ID/hadoop-dn:2.8.0', '.']
       dir: datanode
     - name: 'gcr.io/cloud-builders/docker'
-      args: ['build', '--tag gcr.io/$PROJECT_ID/yarn-rm:2.8.0', '.']
+      args: ['build', '-t', 'gcr.io/$PROJECT_ID/yarn-rm:2.8.0', '.']
       dir: resourcemanager
     - name: 'gcr.io/cloud-builders/docker'
-      args: ['build', '--tag gcr.io/$PROJECT_ID/yarn-nm:2.8.0', '.']
+      args: ['build', '-t', 'gcr.io/$PROJECT_ID/yarn-nm:2.8.0', '.']
       dir: nodemanager
 images:
     - 'gcr.io/$PROJECT_ID/hadoop:2.8.0'
