@@ -15,8 +15,8 @@ steps:
       args: ['build', '--tag gcr.io/$PROJECT_DI/yarn-nm:2.8.0', '.']
       dir: nodemanager
 images:
-    - 'gcr.io/$PROJECT_ID/hadoop
-    - 'gcr.io/$PROJECT_ID/hadoop-nn
-    - 'gcr.io/$PROJECT_ID/hadoop-dn
-    - 'gcr.io/$PROJECT_ID/yarn-rm
-    - 'gcr.io/$PROJECT_ID/yarn-nm
+    - 'gcr.io/$PROJECT_ID/hadoop'
+    - 'gcr.io/$PROJECT_ID/hadoop-nn'
+    - 'gcr.io/$PROJECT_ID/hadoop-dn'
+    - 'gcr.io/$PROJECT_ID/yarn-rm'
+    - 'gcr.io/$PROJECT_ID/yarn-nm'
