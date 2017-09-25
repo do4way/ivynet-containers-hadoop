@@ -5,7 +5,7 @@ RUN \
   sed -i 's/# \(.*multiverse$\)/\1/g' /etc/apt/sources.list && \
   apt-get update && \
   apt-get -y upgrade && \
-  apt-get install -y --no-install-recommends openjdk-8-jre-headless ca-certificates-java && \
+  apt-get install -y --no-install-recommends openjdk-8-jre-headless ca-certificates-java net-tools curl && \
   rm -rf /var/lib/apt/lists/*
 
 ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/

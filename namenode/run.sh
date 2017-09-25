@@ -11,7 +11,7 @@ if [ -z "$CLUSTER_NAME" ]; then
     exit 2
 fi
 
-if [ "`ls -A $namedir`" == "" ]; then
+if [ "`ls -A $namedir`" == "" ] || [ "`ls -A $namedir`" == "lost+found" ]; then
     echo "Formatting namenode name directory: $namedir"
     $HADOOP_PREFIX/bin/hdfs --config $HADOOP_CONF_DIR namenode -format $CLUSTER_NAME
 fi
