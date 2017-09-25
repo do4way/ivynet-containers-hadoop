@@ -13,7 +13,7 @@ fi
 
 if [ "`ls -A $namedir`" == "" ] || [ "`ls -A $namedir`" == "lost+found" ]; then
     echo "Formatting namenode name directory: $namedir"
-    $HADOOP_PREFIX/bin/hdfs --config $HADOOP_CONF_DIR namenode -format $CLUSTER_NAME
+    $HADOOP_PREFIX/bin/hdfs --config $HADOOP_CONF_DIR namenode -format -force $CLUSTER_NAME
 fi
 
 $HADOOP_PREFIX/bin/hdfs --config $HADOOP_CONF_DIR namenode
