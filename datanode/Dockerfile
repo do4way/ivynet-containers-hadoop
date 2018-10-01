@@ -1,6 +1,6 @@
 FROM gcr.io/ivynet-containers/hadoop:2.8.1
 
-ENV HDFS_CONF_dfs_datanode_data_dir=file:///hadoop/dfs/data
+ENV HDFS_CONF_dfs_datanode_data_dir=file:///hadoop/dfs/data,/hadoop/dfs/data01
 RUN mkdir -p /hadoop/dfs/data
 VOLUME /hadoop/dfs/data
 
