@@ -13,7 +13,7 @@ ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
 RUN apt-get update && \
   apt-get install -y --no-install-recommends net-tools curl
 
-ENV HADOOP_VERSION 2.8.1
+ENV HADOOP_VERSION 2.8.5
 ENV HADOOP_URL https://www.apache.org/dist/hadoop/common/hadoop-$HADOOP_VERSION/hadoop-$HADOOP_VERSION.tar.gz
 ENV HADOOP_KEY_URL https://dist.apache.org/repos/dist/release/hadoop/common/KEYS
 RUN set -x \
